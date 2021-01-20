@@ -1,15 +1,37 @@
 const grid = document.querySelector(".grid");
+const sizeId = document.getElementById("size");
+const size = sizeId.value;
 
 function create(gridSize){
     let gridArea = gridSize * gridSize;
-
     for (let i = 1; i <= gridArea; i++){
         let gridSquare = document.createElement("div");
         grid.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
         grid.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
         grid.insertAdjacentElement('beforeend', gridSquare);
-        console.log("hello")
+    }
+    let gridPixels=grid.querySelectorAll("div");
+    gridPixels.forEach(gridPixel => {gridPixel.addEventListener("mouseover", color)
+        
+    });
+}
+
+function color(){
+    if (this.style.backgroundColor = "#d8e2dc"){
+        this.style.backgroundColor="#000000";
     }
 }
 
-create(16);
+function eraseSome(){
+    let gridPixels=grid.querySelectorAll("div");
+    gridPixels.forEach(gridPixel => {
+        if (gridPixel.style.backgroundColor != "#d8e2dc"){
+            gridPixel.style.backgroundColor ="#d8e2dc";
+        }
+    })
+}
+
+
+create(size);
+
+eraser.addEventListener('mouseover',eraseSome);

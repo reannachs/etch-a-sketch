@@ -44,7 +44,7 @@ header {
     margin: auto;
     font-size:larger;
 }
- #eraser{
+ #restart{
     background-color:#d8e2dc;
     color: #2a9d8f;
     font-size:larger;
@@ -58,7 +58,7 @@ header {
     border: solid 2px #2a9d8f; 
  }
 
- #start-over{
+ #eraser{
     background-color:#d8e2dc;
     color: #2a9d8f;
     font-size:larger;
