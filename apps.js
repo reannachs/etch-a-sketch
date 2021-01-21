@@ -1,6 +1,5 @@
 const grid = document.querySelector(".grid");
-const sizeId = document.getElementById("size");
-const size = sizeId.value;
+const size = 16;
 
 function create(gridSize){
     let gridArea = gridSize * gridSize;
@@ -34,4 +33,4 @@ function eraseSome(){
 
 create(size);
 
-eraser.addEventListener('mouseover',eraseSome);
+restart.addEventListener('click',eraseSome);
